@@ -5,7 +5,6 @@
     <h1 id="{{ urlize .Title }}">{{ .Title }}</h1>
     <p>{{ .Content }}</p>
     {{ range .Data.Pages.ByWeight }}
-        {{ partial (printf "%s%s" .Section "Summary") . }}
     {{ end }}
     {{ range .Sections }}
       <h2 id="{{ urlize .Title }}"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
